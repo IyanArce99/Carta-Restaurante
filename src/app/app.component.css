@@ -1,0 +1,53 @@
+
+.navbar-brand {
+    color: white!important;
+}
+.navbar {
+        background: #796569!important;
+}
+.navbar li a {
+    color: white!important;
+    padding: 10px 15px!important;
+}
+.dropdown-item:hover {
+    background: #796569!important;
+}
+
+
+.logo {
+    max-width: 300px
+}
+
+.item-1, .item-2, .item-3 {
+    color: white
+}
+.item-1:hover, .item-2:hover, .item-3:hover {
+    color: white
+}
+.item-1 {
+    background: #545e6a!important
+}
+.item-2 {
+    background: #849961!important
+}
+.item-3 {
+    background: #65a38b!important
+}
+
+.h1-head {
+    padding: 150px 0;
+}
+.brdr-btn {
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 576px) {
+    .menu-index {
+        margin-bottom: 50px;
+    }
+}
+.firma a
+{
+    color: black!important; 
+    text-align: center;
+}
