@@ -1,0 +1,21 @@
+* {
+    color: #02023e;
+}
+.wrapper {
+    background: #EAF8FF;
+    min-height: 100vh;
+}
+
+.bg-2 {
+    background: #5d2bf9;
+}
+.item-2 {
+    color: white;
+    background: #02023e;
+}
+
+.brdr-btn {
+    border-bottom: 1px solid #02023e;
+}
+
+
