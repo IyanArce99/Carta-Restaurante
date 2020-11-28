@@ -1,0 +1,15 @@
+<div class="wrapper d-flex align-items-center">
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="form-signin">
+      <img class="mb-4" [src]="logo" alt="" 
+        height="72">
+      <h1 class="h3 mb-3 font-weight-normal text-center">Registrarse</h1>
+      <label for="inputEmail" class="sr-only">Usuario</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email" formControlName="email" required autofocus>
+      <label for="inputPassword" class="sr-only">Contraseña</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" formControlName="password" required>
+      <button class="btn btn-lg text-white btn-block bg-01" type="submit">Registrarse</button>
+      <p class="mt-5 mb-3 text-center">&copy; 2020 Oviweb</p>
+    </form>
+  </div>
+  
+  
