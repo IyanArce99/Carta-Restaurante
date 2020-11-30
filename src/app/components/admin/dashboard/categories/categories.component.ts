@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../../../../services/category.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-categories',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  loginForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
 
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+
+  }
 }

@@ -1,6 +1,14 @@
 <h1 class="mt-4">Añadir categorías a la carta</h1>
 <p>Añade categorías a la carta.</p>
 
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="" formControlName="email" id="">
+      <button type="submit">Añadir</button>
+    </form>
+  </div>
+</div>
 <table class="table mt-5 w-25">
     <caption>Lista de categorías</caption>
     <thead>
