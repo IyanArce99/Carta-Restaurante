@@ -2,9 +2,9 @@
 <p>Añade categorías a la carta.</p>
 <div class="row">
   <div class="col-6">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input type="text" name="" formControlName="email" id="">
-      <button type="submit">Añadir</button>
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" class="d-flex">
+      <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat">
+      <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white px-2"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>
     </form>
   </div>
 </div>
@@ -16,16 +16,14 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Setas de temporada</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Setas de temporada</td>
+      <tr *ngFor="let category of categoryList; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ category.name }}</td>
+        <td><button (click)="editCategory(category)" class="btn-edit text-white px-2 mr-2"><i class="fas fa-edit"></i></button><button (click)="deleteCategory(category.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
       </tr>
     </tbody>
   </table>
