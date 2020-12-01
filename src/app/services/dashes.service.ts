@@ -16,6 +16,7 @@ export class DashesService {
   }
 
   insertDashes(dash: Dash) {
+    console.log(this.dashesList);
     this.dashesList.push({
       name: dash.name,
       description: dash.description,
