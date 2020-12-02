@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Category } from '../models/category';
 import { Dash } from '../models/dash';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { Dash } from '../models/dash';
 })
 export class DashesService {
   dashesList: AngularFireList <any>;
-  selectDash: Dash = new Dash();
+  selectCategory: Category = new Category();
 
   constructor(private firebase: AngularFireDatabase) { }
 
@@ -16,12 +17,17 @@ export class DashesService {
   }
 
   insertDashes(dash: Dash) {
-    console.log(this.dashesList);
     this.dashesList.push({
       name: dash.name,
       description: dash.description,
       price: dash.price,
       category: dash.category
+    });
+  }
+
+  updateCategories(category: Category) {
+    this.dashesList.update(category.$key, {
+      name: category.name
     });
   }
 
