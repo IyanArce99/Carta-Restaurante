@@ -21,7 +21,8 @@ export class DashesService {
       name: dash.name,
       description: dash.description,
       price: dash.price,
-      category: dash.category
+      category: dash.category,
+      category_id: dash.category_id
     });
   }
 

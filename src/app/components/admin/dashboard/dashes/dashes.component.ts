@@ -16,7 +16,7 @@ export class DashesComponent implements OnInit {
     name: new FormControl(''),
     price: new FormControl(''),
     description: new FormControl(''),
-    category: new FormControl('')
+    category: new FormControl(''),
   });
   categoryList: Category[];
   dashesList: Dash[];

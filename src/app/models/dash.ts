@@ -3,5 +3,6 @@ export class Dash {
     name: string;
     description: string;
     price: string;
-    category: string
+    category: string;
+    category_id: string;
 }
