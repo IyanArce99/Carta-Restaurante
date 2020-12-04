@@ -1,34 +1,23 @@
 <div class="wrapper">
     <section>
-        <div class="container pt-5">
+        <div class="container pt-5" *ngFor="let category of categoryList">
             <div class="row d-flex justify-content-center">
-                <div class="col-6 item-2 text-center text-uppercase py-2 px-3" id="entrantes">Entrantes</div>
-            </div>
-            <div class="row d-flex justify-content-between brdr-btn py-3">
-                <div class="col-9 text-uppercase font-weight-bold">
-                    Croquetas caseras <img [src]="gluten" width="20" height="20" style="vertical-align:middle"><img [src]="huevos" width="20" height="20" style="vertical-align:middle"><img [src]="lacteos" width="20" height="20" style="vertical-align:middle">
-                    <br><small>De cecina, jamón o boletus</small>
+                <div class="col-6 item-2 text-center text-uppercase py-2 px-3" id="entrantes">{{category.name}}
                 </div>
-                <div class="col-3 text-right font-weight-bold">10,00 €</div>
             </div>
-            <div class="row d-flex justify-content-between brdr-btn py-3">
-              <div class="col-9 text-uppercase font-weight-bold">
-                  Croquetas caseras <img [src]="gluten" width="20" height="20" style="vertical-align:middle"><img [src]="huevos" width="20" height="20" style="vertical-align:middle"><img [src]="lacteos" width="20" height="20" style="vertical-align:middle">
-                  <br><small>De cecina, jamón o boletus</small>
-              </div>
-              <div class="col-3 text-right font-weight-bold">10,00 €</div>
-          </div>
-          <div class="row d-flex justify-content-between brdr-btn py-3">
-              <div class="col-9 text-uppercase font-weight-bold">
-                  Croquetas caseras <img [src]="gluten" width="20" height="20" style="vertical-align:middle"><img [src]="huevos" width="20" height="20" style="vertical-align:middle"><img [src]="lacteos" width="20" height="20" style="vertical-align:middle">
-                  <br><small>De cecina, jamón o boletus</small>
-              </div>
-              <div class="col-3 text-right font-weight-bold">10,00 €</div>
-          </div>
+            <div class="row d-flex justify-content-between brdr-btn py-3" *ngFor="let dish of category.dishes">
+                <div class="col-9 text-uppercase font-weight-bold">
+                    {{dish.name}} <img [src]="gluten" width="20" heightVGB="20" style="vertical-align:middle"><img
+                        [src]="huevos" width="20" height="20" style="vertical-align:middle"><img [src]="lacteos"
+                        width="20" height="20" style="vertical-align:middle">
+                    <br><small>{{dish.description}}</small>
+                </div>
+                <div class="col-3 text-right font-weight-bold">{{dish.price | currency:'€'}}</div>
+            </div>
         </div>
-      </section>
-      <!-- <Leyenda>-->
-      <section>
+    </section>
+    <!-- <Leyenda>-->
+    <section>
         <div class="d-flex justify-content-center">
             <div class="col-6 text-center text-uppercase py-2 px-3">
                 <img [src]="sulfitos" width="20" height="20"><small> Sulfitos </small>
@@ -38,10 +27,11 @@
                 <img [src]="lacteos" width="20" height="20"><small> Lácteos </small>
                 <img [src]="huevos" width="20" height="20"><small> Huevos </small>
                 <img [src]="frutos" width="20" height="20"><small> Frutos Secos </small>
-                <br> <small>* información de alergenos: consulte con nuestro personal si tiene alguna intolerancia.</small>
+                <br> <small>* información de alergenos: consulte con nuestro personal si tiene alguna
+                    intolerancia.</small>
                 <br>I.V.A Incluido
-            </div>                        
+            </div>
         </div>
-       
-      </section>
+
+    </section>
 </div>
