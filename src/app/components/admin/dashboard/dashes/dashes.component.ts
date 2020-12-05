@@ -17,6 +17,13 @@ export class DashesComponent implements OnInit {
     price: new FormControl(''),
     description: new FormControl(''),
     category: new FormControl(''),
+    sulfitos: new FormControl(''),
+    crustaceos: new FormControl(''),
+    pescados: new FormControl(''),
+    gluten: new FormControl(''),
+    lacteos: new FormControl(''),
+    huevos: new FormControl(''),
+    frutos: new FormControl(''),
   });
   categoryList: Category[];
   dashesList: Dash[];
@@ -50,9 +57,6 @@ export class DashesComponent implements OnInit {
     console.log("Correcto");
   }
 
-  editCategory(category: Category) {
-    console.log(category);
-  }
 
   deleteCategory($key: string) {
     this.dashesService.deleteDashes($key);

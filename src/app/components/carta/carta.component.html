@@ -7,9 +7,16 @@
             </div>
             <div class="row d-flex justify-content-between brdr-btn py-3" *ngFor="let dish of category.dishes">
                 <div class="col-9 text-uppercase font-weight-bold">
-                    {{dish.name}} <img [src]="gluten" width="20" heightVGB="20" style="vertical-align:middle"><img
-                        [src]="huevos" width="20" height="20" style="vertical-align:middle"><img [src]="lacteos"
-                        width="20" height="20" style="vertical-align:middle">
+                    {{dish.name}} 
+                    <img *ngIf="dish.sulfitos" [src]="sulfitos" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.crustaceos" [src]="crustaceos" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.pescados" [src]="pescados" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.gluten" [src]="gluten" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.lacteos" [src]="lacteos" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.huevos" [src]="huevos" width="20" heightVGB="20" style="vertical-align:middle">
+                    <img *ngIf="dish.frutos" [src]="frutos" width="20" heightVGB="20" style="vertical-align:middle">
+
+
                     <br><small>{{dish.description}}</small>
                 </div>
                 <div class="col-3 text-right font-weight-bold">{{dish.price | currency:'€'}}</div>

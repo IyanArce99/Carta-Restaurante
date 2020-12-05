@@ -22,6 +22,13 @@ export class DashesService {
       description: dash.description,
       price: dash.price,
       category: dash.category,
+      sulfitos: dash.sulfitos,
+      crustaceos: dash.crustaceos,
+      pescados: dash.pescados,
+      gluten: dash.gluten,
+      lacteos: dash.lacteos,
+      huevos: dash.huevos,
+      frutos: dash.frutos
     });
   }
 

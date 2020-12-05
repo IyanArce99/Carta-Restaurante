@@ -4,5 +4,11 @@ export class Dash {
     description: string;
     price: string;
     category: string;
-    category_id: string;
+    sulfitos: boolean;
+    crustaceos: boolean;
+    pescados: boolean;
+    gluten: boolean;
+    lacteos: boolean;
+    huevos: boolean;
+    frutos: boolean;
 }
