@@ -21,6 +21,7 @@ export class CartaComponent implements OnInit {
   frutos = '../assets/frutos.jpg';
   public dashesList: any[] = [];
   public categoryList: any[] = [];
+  loader: boolean = true;
 
   constructor(private dashesService: DashesService, private categoryService: CategoryService) { }
 
@@ -30,7 +31,7 @@ export class CartaComponent implements OnInit {
         this.dashesList = this.getPayloadData(dishesPayload);
         const categories = this.getPayloadData(catsPayload);
         this.buildCategoriesByGroup(categories);
-
+        this.loader = false;
       });
   }
   getPayloadData(payload: any): any[] {
