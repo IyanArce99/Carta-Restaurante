@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as $ from "jquery";
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService, private router: Router) { }
 
 
   async ngOnInit() {
@@ -17,6 +18,7 @@ export class DashboardComponent implements OnInit {
     if (user) {
       localStorage.setItem('uid', user.uid);
     }
+    this.router.navigate(['/dashboard/categories']);
   }
 
   toggle() {

@@ -24,6 +24,10 @@ export class DashesComponent implements OnInit {
     lacteos: new FormControl(''),
     huevos: new FormControl(''),
     frutos: new FormControl(''),
+    price_sm: new FormControl(''),
+    price_md: new FormControl(''),
+    price_gr: new FormControl(''),
+
   });
   categoryList: Category[];
   dashesList: Dash[];

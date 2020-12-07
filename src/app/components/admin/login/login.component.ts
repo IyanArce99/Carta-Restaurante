@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     try {
       const user = this.authSvc.login(email, password);
       if (user) {
-        this.router.navigate(['./dashboard']);
+        this.router.navigate(['./dashboard/categories']);
       }
     }
     catch {

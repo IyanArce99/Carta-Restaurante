@@ -28,7 +28,11 @@ export class DashesService {
       gluten: dash.gluten,
       lacteos: dash.lacteos,
       huevos: dash.huevos,
-      frutos: dash.frutos
+      frutos: dash.frutos,
+      price_sm: dash.price_sm,
+      price_md: dash.price_md,
+      price_gr: dash.price_gr
+
     });
   }
 

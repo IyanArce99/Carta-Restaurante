@@ -1,24 +1,24 @@
 <h1 class="mt-4">Añadir platos</h1>
 <p>Añade platos a la carta.</p>
 <div class="row">
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-5">
     <form [formGroup]="dashesForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
       <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100" placeholder="Nombre">
           </div>
-          <div class="col-6">
+          <div class="col-4">
             <input type="number" name="" formControlName="price" class="mr-2 rounded inpt-cat w-100" placeholder="Precio">
           </div>
-          <div class="col-12">
-              <select name="" formControlName="category" class="w-100 mt-2">
+          <div class="col-4">
+              <select name="" formControlName="category" class="w-100">
                 <option *ngFor="let cat of categoryList" value="{{ cat.$key }}">{{ cat.name }}</option>
               </select>
           </div>
           <div class="col-12">
             <textarea name="description" formControlName="description" id="" cols="10" rows="5" class="mt-2 w-100"></textarea>   
           </div>
-          <div class="col-12">
+          <div class="col-12 d-flex justify-content-center">
             <div class="form-check form-check-inline">
               <input  formControlName="sulfitos" class="form-check-input" type="checkbox" id="sulfitos" value="sulfitos">
               <label class="form-check-label mr-2" for="sulfitos">Sulfitos</label>
@@ -35,6 +35,15 @@
               <input  formControlName="frutos" class="form-check-input" type="checkbox" id="frutos" value="frutos">
               <label class="form-check-label mr-2" for="frutos">Frutos secos</label>
             </div>  
+          </div>
+          <div class="col-4">
+            <input type="number" name="" id="" placeholder="Precio Pq" formControlName="price_sm">
+          </div>
+          <div class="col-4">
+            <input type="number" name="" id="" placeholder="Precio Md" formControlName="price_md">
+          </div>
+          <div class="col-4">
+            <input type="number" name="" id="" placeholder="Precio Gr" formControlName="price_gr">
           </div>
       </div>
       <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white px-2 mt-3"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>

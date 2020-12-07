@@ -16,10 +16,10 @@
                     <img *ngIf="dish.huevos" [src]="huevos" width="20" heightVGB="20" style="vertical-align:middle">
                     <img *ngIf="dish.frutos" [src]="frutos" width="20" heightVGB="20" style="vertical-align:middle">
 
-
                     <br><small>{{dish.description}}</small>
                 </div>
-                <div class="col-3 text-right font-weight-bold">{{dish.price | currency:'€'}}</div>
+                <div *ngIf="!dish.price_sm" class="col-3 text-right font-weight-bold">{{dish.price | currency:'€'}}</div>
+                <div *ngIf="dish.price_sm" class="col-3 text-right font-weight-bold">Pq: {{dish.price_sm | currency:'€'}} - Md: {{dish.price_md | currency:'€'}} - Gr: {{dish.price_gr | currency:'€'}}</div>
             </div>
         </div>
     </section>
