@@ -1,0 +1,51 @@
+<div *ngIf="loader" class="loader">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+  <div *ngIf="!loader" class="wrapper">
+    <section class="img-header">
+      <h1 class="h1-head text-center text-white">Nuestras bebidas</h1>
+    </section>
+    <section>
+      <div class="container pt-5" *ngFor="let category of categoryList">
+        <div class="row d-flex justify-content-center">
+          <div class="col-6 item-2 text-center text-uppercase py-2 px-3" id="entrantes">{{category.name}}
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between brdr-btn py-3" *ngFor="let dish of category.dishes">
+          <div class="col-9 text-uppercase font-weight-bold">
+            {{dish.name}}
+            <img *ngIf="dish.sulfitos" [src]="sulfitos" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.crustaceos" [src]="crustaceos" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.pescados" [src]="pescados" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.gluten" [src]="gluten" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.lacteos" [src]="lacteos" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.huevos" [src]="huevos" width="20" heightVGB="20" style="vertical-align:middle">
+            <img *ngIf="dish.frutos" [src]="frutos" width="20" heightVGB="20" style="vertical-align:middle">
+  
+            <br><small>{{dish.description}}</small>
+          </div>
+          <div *ngIf="!dish.price_sm" class="col-3 text-right font-weight-bold">{{dish.price | currency:'€'}}</div>
+          <div *ngIf="dish.price_sm" class="col-3 text-right font-weight-bold">Pq: {{dish.price_sm | currency:'€'}} - Md:
+            {{dish.price_md | currency:'€'}} - Gr: {{dish.price_gr | currency:'€'}}</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="d-flex justify-content-center mt-5">
+        <div class="col-6 text-center text-uppercase py-2 px-3">
+          <img [src]="sulfitos" width="20" height="20"><small> Sulfitos </small>
+          <img [src]="crustaceos" width="20" height="20"><small> Crustáceos </small>
+          <img [src]="pescados" width="20" height="20"><small> Pescados </small>
+          <img [src]="gluten" width="20" height="20"><small> Gluten </small>
+          <img [src]="lacteos" width="20" height="20"><small> Lácteos </small>
+          <img [src]="huevos" width="20" height="20"><small> Huevos </small>
+          <img [src]="frutos" width="20" height="20"><small> Frutos Secos </small>
+          <br> <small>* información de alergenos: consulte con nuestro personal si tiene alguna
+            intolerancia.</small>
+          <br>I.V.A Incluido
+        </div>
+      </div>
+  
+    </section>
+  </div>
+  

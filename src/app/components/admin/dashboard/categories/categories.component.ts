@@ -34,10 +34,6 @@ export class CategoriesComponent implements OnInit {
     console.log("Correcto");
   }
 
-  editCategory(category: Category) {
-    console.log(category);
-  }
-
   deleteCategory($key: string) {
     this.categoryService.deleteCategories($key);
   }

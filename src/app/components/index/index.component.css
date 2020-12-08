@@ -1,0 +1,64 @@
+.wraper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../assets/bg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar-brand {
+    color: white!important;
+}
+.navbar {
+        background: #796569!important;
+}
+.navbar li a {
+    color: white!important;
+    padding: 10px 15px!important;
+}
+.dropdown-item:hover {
+    background: #796569!important;
+}
+
+
+.logo {
+    max-width: 300px
+}
+
+.item-1, .item-2, .item-3 {
+    color: white
+}
+.item-1:hover, .item-2:hover, .item-3:hover {
+    color: white
+}
+.item-1 {
+    background: #545e6a!important
+}
+.item-2 {
+    background: #849961!important
+}
+.item-3 {
+    background: #65a38b!important
+}
+
+.img-header {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/img-head.jpg); */
+    background-size: cover;
+    background-position: center;
+}
+.h1-head {
+    padding: 150px 0;
+}
+.brdr-btn {
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 576px) {
+    .menu-index {
+        margin-bottom: 50px;
+    }
+}
+.firma a
+{
+    color: black!important; 
+    text-align: center;
+}

@@ -1,0 +1,70 @@
+<h1 class="mt-4">Añadir bebidas</h1>
+<p>Añade bebidas a la carta.</p>
+<div class="row">
+  <div class="col-12 col-md-5">
+    <form [formGroup]="drinksForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+      <div class="row">
+          <div class="col-4">
+            <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100" placeholder="Nombre">
+          </div>
+          <div class="col-4">
+            <input type="number" name="" formControlName="price" class="mr-2 rounded inpt-cat w-100" placeholder="Precio">
+          </div>
+          <div class="col-4">
+              <select name="" formControlName="category" class="w-100">
+                <option *ngFor="let cat of categoryList" value="{{ cat.$key }}">{{ cat.name }}</option>
+              </select>
+          </div>
+          <div class="col-12">
+            <textarea name="description" formControlName="description" id="" cols="10" rows="5" class="mt-2 w-100"></textarea>   
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <div class="form-check form-check-inline">
+              <input  formControlName="sulfitos" class="form-check-input" type="checkbox" id="sulfitos" value="sulfitos">
+              <label class="form-check-label mr-2" for="sulfitos">Sulfitos</label>
+              <input  formControlName="crustaceos" class="form-check-input" type="checkbox" id="crustaceos" value="crustaceos">
+              <label class="form-check-label mr-2" for="crustaceos">Crustáceos</label>
+              <input  formControlName="pescados" class="form-check-input" type="checkbox" id="pescados" value="pescados">
+              <label class="form-check-label mr-2" for="pescados">Pescados</label>
+              <input  formControlName="gluten" class="form-check-input" type="checkbox" id="gluten" value="gluten">
+              <label class="form-check-label mr-2" for="gluten">Gluten</label>
+              <input  formControlName="lacteos" class="form-check-input" type="checkbox" id="lacteos" value="lacteos">
+              <label class="form-check-label mr-2" for="lacteos">Lácteos</label>
+              <input  formControlName="huevos" class="form-check-input" type="checkbox" id="huevos" value="huevos">
+              <label class="form-check-label mr-2" for="huevos">Huevo</label>
+              <input  formControlName="frutos" class="form-check-input" type="checkbox" id="frutos" value="frutos">
+              <label class="form-check-label mr-2" for="frutos">Frutos secos</label>
+            </div>  
+          </div>
+      </div>
+      <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white px-2 mt-3"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>
+    </form>
+  </div>
+</div>
+<!-- 
+<table class="table mt-5">
+  <caption>Lista de platos</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Categoría</th>
+      <th scope="col">Leyenda</th>     
+      <th scope="col">Acciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dash of dashesList; let i = index">
+      <th scope="row">{{ i }}</th>
+      <td>{{ dash.name }}</td>
+      <td>{{ dash.description }}</td>
+      <td>{{ dash.price }} €</td>
+      <td>{{ dash.category }}</td>
+      <td>{{ dash.gluten }}</td>
+      <td><button (click)="deleteCategory(dash.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
+    </tr>
+  </tbody>
+</table> -->

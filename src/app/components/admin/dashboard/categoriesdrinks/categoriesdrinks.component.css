@@ -1,0 +1,21 @@
+.btn-principal {
+    background: #5d2bf9;
+    border: none;
+}
+.btn-edit {
+    background: #4FA904;
+    border: none;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+.btn-delete {
+    background: red;
+    border: none;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+.inpt-cat {
+    border: 1px solid #02023e;
+}

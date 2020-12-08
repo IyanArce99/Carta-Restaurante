@@ -18,6 +18,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // AM
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { IndexComponent } from './components/index/index.component';
+import { PromotionsComponent } from './components/admin/dashboard/promotions/promotions.component';
+import { DrinksComponent } from './components/admin/dashboard/drinks/drinks.component';
+import { CategoriesdrinksComponent } from './components/admin/dashboard/categoriesdrinks/categoriesdrinks.component';
+import { BebidasComponent } from './components/bebidas/bebidas.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     DashesComponent,
     CategoriesComponent,
     RegisterComponent,
+    IndexComponent,
+    PromotionsComponent,
+    DrinksComponent,
+    CategoriesdrinksComponent,
+    BebidasComponent,
   ],
   imports: [
     BrowserModule,

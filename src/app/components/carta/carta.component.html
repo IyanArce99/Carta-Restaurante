@@ -2,6 +2,9 @@
   <mat-spinner class="spinner"></mat-spinner>
 </div>
 <div *ngIf="!loader" class="wrapper">
+  <section class="img-header">
+    <h1 class="h1-head text-center text-white">Nuestra carta</h1>
+  </section>
   <section>
     <div class="container pt-5" *ngFor="let category of categoryList">
       <div class="row d-flex justify-content-center">
@@ -28,7 +31,7 @@
     </div>
   </section>
   <section>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-5">
       <div class="col-6 text-center text-uppercase py-2 px-3">
         <img [src]="sulfitos" width="20" height="20"><small> Sulfitos </small>
         <img [src]="crustaceos" width="20" height="20"><small> Crustáceos </small>
