@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/admin/register/register.componen
 import { BebidasComponent } from './components/bebidas/bebidas.component';
 import { CartaComponent } from './components/carta/carta.component';
 import { IndexComponent } from './components/index/index.component';
+import { PromocionesComponent } from './components/promociones/promociones.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'bebidas',
     component: BebidasComponent
+  },
+  {
+    path: 'promociones',
+    component: PromocionesComponent
   },
   { 
     path: 'login', 

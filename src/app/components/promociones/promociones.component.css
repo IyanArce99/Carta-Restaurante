@@ -1,0 +1,44 @@
+* {
+    color: #02023e;
+}
+.wrapper {
+    background: #EAF8FF;
+    min-height: 100vh;
+}
+
+.img-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../assets/drinks.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+}
+
+.bg-2 {
+    background: #5d2bf9;
+}
+.item-2 {
+    color: white;
+    background: #02023e;
+}
+
+.brdr-btn {
+    border-bottom: 1px solid #02023e;
+}
+.loader {
+    min-height: 100vh;
+    background: #EAF8FF;
+}
+
+.loader::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #02023e;
+}
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+

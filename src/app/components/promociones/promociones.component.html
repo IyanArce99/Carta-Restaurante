@@ -1,0 +1,16 @@
+<div *ngIf="loader" class="loader">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+  <div *ngIf="!loader" class="wrapper">
+    <section class="img-header">
+      <h1 class="h1-head text-center text-white">Nuestras promociones</h1>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row py-5">
+                <img *ngFor="let urls of url" src="{{urls}}" alt="">
+            </div>
+        </div>
+    </section>
+  </div>
+  

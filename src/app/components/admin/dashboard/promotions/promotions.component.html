@@ -1,1 +1,19 @@
-<p>promotions works!</p>
+<div class="row">
+  <div class="col-6">
+    <h1 class="mt-4">Añadir promociones</h1>
+    <p>Añade una imagen de promoción a tu carta.</p>
+
+    <div class="form-group col-12">
+        <input type="file"
+        id="file"
+        #userPhoto
+        (change)="onFileSelected($event)"
+        name="image"
+        autocomplete="off"
+        />
+       </div>
+  </div>
+  <div class="container" *ngIf="downloadURL | async; let url">
+    <img [src]="url" alt="Image from AngularFireStorage">
+</div>
+</div>

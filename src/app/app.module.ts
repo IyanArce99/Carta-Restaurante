@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from'@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/admin/login/login.component';
 import { CartaComponent } from './components/carta/carta.component';
@@ -23,6 +24,7 @@ import { PromotionsComponent } from './components/admin/dashboard/promotions/pro
 import { DrinksComponent } from './components/admin/dashboard/drinks/drinks.component';
 import { CategoriesdrinksComponent } from './components/admin/dashboard/categoriesdrinks/categoriesdrinks.component';
 import { BebidasComponent } from './components/bebidas/bebidas.component';
+import { PromocionesComponent } from './components/promociones/promociones.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { BebidasComponent } from './components/bebidas/bebidas.component';
     DrinksComponent,
     CategoriesdrinksComponent,
     BebidasComponent,
+    PromocionesComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { BebidasComponent } from './components/bebidas/bebidas.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
