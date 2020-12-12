@@ -8,21 +8,26 @@ import { UploadService } from 'src/app/services/upload.service';
 })
 export class PromocionesComponent implements OnInit {
   loader: boolean = false;
-  url:any[];
+  urls:any[];
+  url: any[];
+
 
   constructor(private imgSvc: UploadService) { }
 
   ngOnInit(): void {
     this.imgSvc.getImg().snapshotChanges().subscribe( data => {
-      this.url = [];
+      this.urls = [];
       data.forEach( element => {
         let x = element.payload.toJSON();
-        this.url.push(x);
-        console.log(x);
-        console.log(this.url);
+        this.urls.push(x);
       })
-      console.log(data);
+      this.getLastUrl();
     })
+  }
+
+  getLastUrl() {
+    // this.url = this.urls[this.urls.length - 1];
+    console.log(this.urls[this.urls.length - 1]);
   }
 
 }

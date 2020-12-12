@@ -25,6 +25,8 @@ import { DrinksComponent } from './components/admin/dashboard/drinks/drinks.comp
 import { CategoriesdrinksComponent } from './components/admin/dashboard/categoriesdrinks/categoriesdrinks.component';
 import { BebidasComponent } from './components/bebidas/bebidas.component';
 import { PromocionesComponent } from './components/promociones/promociones.component';
+import { FormsModule }   from '@angular/forms';
+import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash/edit-dash.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { PromocionesComponent } from './components/promociones/promociones.compo
     CategoriesdrinksComponent,
     BebidasComponent,
     PromocionesComponent,
+    EditDashComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { PromocionesComponent } from './components/promociones/promociones.compo
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

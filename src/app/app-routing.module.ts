@@ -4,6 +4,7 @@ import { CategoriesComponent } from './components/admin/dashboard/categories/cat
 import { CategoriesdrinksComponent } from './components/admin/dashboard/categoriesdrinks/categoriesdrinks.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { DashesComponent } from './components/admin/dashboard/dashes/dashes.component';
+import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash/edit-dash.component';
 import { DrinksComponent } from './components/admin/dashboard/drinks/drinks.component';
 import { PromotionsComponent } from './components/admin/dashboard/promotions/promotions.component';
 import { LoginComponent } from './components/admin/login/login.component';
@@ -46,7 +47,13 @@ const routes: Routes = [
     children: [
       {
         path: 'dashes',
-        component: DashesComponent
+        component: DashesComponent,
+        children: [
+          {
+            path: 'edit/:id',
+            component: EditDashComponent
+          }
+        ]
       },
       {
         path: 'drinks',

@@ -5,20 +5,21 @@
     <form [formGroup]="drinksForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
       <div class="row">
           <div class="col-4">
-            <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100" placeholder="Nombre">
+            <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100 p-1" placeholder="Nombre">
           </div>
           <div class="col-4">
-            <input type="number" name="" formControlName="price" class="mr-2 rounded inpt-cat w-100" placeholder="Precio">
+            <input type="number" name="" formControlName="price" class="mr-2 rounded inpt-cat w-100 p-1" placeholder="Precio">
           </div>
           <div class="col-4">
-              <select name="" formControlName="category" class="w-100">
+              <select name="" formControlName="category" class="w-100 p-1 inpt-cat rounded">
+                <option value="" selected disabled hidden>Selecciona una categoría</option>
                 <option *ngFor="let cat of categoryList" value="{{ cat.$key }}">{{ cat.name }}</option>
               </select>
           </div>
           <div class="col-12">
             <textarea name="description" formControlName="description" id="" cols="10" rows="5" class="mt-2 w-100"></textarea>   
           </div>
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-12 d-flex justify-content-center mt-2">
             <div class="form-check form-check-inline">
               <input  formControlName="sulfitos" class="form-check-input" type="checkbox" id="sulfitos" value="sulfitos">
               <label class="form-check-label mr-2" for="sulfitos">Sulfitos</label>
@@ -37,11 +38,11 @@
             </div>  
           </div>
       </div>
-      <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white px-2 mt-3"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>
+      <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white p-2 mt-3"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>
     </form>
   </div>
 </div>
-<!-- 
+
 <table class="table mt-5">
   <caption>Lista de platos</caption>
   <thead>
@@ -49,22 +50,18 @@
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Descripción</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Categoría</th>
-      <th scope="col">Leyenda</th>     
+      <th scope="col">Precio</th> 
       <th scope="col">Acciones</th>
 
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let dash of dashesList; let i = index">
+    <tr *ngFor="let drink of drinksList; let i = index">
       <th scope="row">{{ i }}</th>
-      <td>{{ dash.name }}</td>
-      <td>{{ dash.description }}</td>
-      <td>{{ dash.price }} €</td>
-      <td>{{ dash.category }}</td>
-      <td>{{ dash.gluten }}</td>
-      <td><button (click)="deleteCategory(dash.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
+      <td>{{ drink.name }}</td>
+      <td>{{ drink.description }}</td>
+      <td>{{ drink.price }} €</td>
+      <td><button (click)="deleteCategory(drink.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
     </tr>
   </tbody>
-</table> -->
+</table>

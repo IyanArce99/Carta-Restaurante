@@ -10,7 +10,6 @@ import { UploadService } from '../../../../services/upload.service';
   styleUrls: ['./promotions.component.css']
 })
 export class PromotionsComponent implements OnInit {
-  title = "cloudsSorage";
   selectedFile: File = null;
   fb: any;
   downloadURL: Observable<string>;

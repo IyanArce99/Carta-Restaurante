@@ -34,6 +34,12 @@ export class CategoriesdrinksComponent implements OnInit {
     console.log("Correcto");
   }
 
+  editCategory(category: Category_drink) {
+    console.log(category);
+    this.categoryDrinksForm.setValue(category);
+    console.log(category);
+  }
+
   deleteCategory($key: string) {
     this.categoryService.deleteCategories($key);
   }

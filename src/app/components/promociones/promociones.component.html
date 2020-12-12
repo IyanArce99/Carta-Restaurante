@@ -7,8 +7,8 @@
     </section>
     <section>
         <div class="container">
-            <div class="row py-5">
-                <img *ngFor="let urls of url" src="{{urls}}" alt="">
+            <div class="row py-5" *ngFor="let url of urls; let i = index">
+                <img *ngIf="i === 0" src="{{url}}" alt="">
             </div>
         </div>
     </section>

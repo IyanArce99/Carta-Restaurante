@@ -61,6 +61,9 @@ export class DashesComponent implements OnInit {
     console.log("Correcto");
   }
 
+  editDash(dash: Dash) {
+    console.log(dash);
+  }
 
   deleteCategory($key: string) {
     this.dashesService.deleteDashes($key);
