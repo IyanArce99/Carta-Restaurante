@@ -2,7 +2,7 @@
 <p>Añade platos a la carta.</p>
 <div class="row">
   <div class="col-12 col-md-5">
-    <form [formGroup]="dashesForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+    <form [formGroup]="dashesForm" class="d-flex flex-column">
       <div class="row">
           <div class="col-4">
             <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100 p-1" placeholder="Nombre">
@@ -19,7 +19,7 @@
           <div class="col-12">
             <textarea name="description" formControlName="description" id="" cols="10" rows="5" class="mt-2 w-100"></textarea>   
           </div>
-          <div class="col-12 d-flex justify-content-center mt-2 mb-2">
+          <div class="col-12 mt-2 mb-2">
             <div class="form-check form-check-inline">
               <input  formControlName="sulfitos" class="form-check-input" type="checkbox" id="sulfitos" value="sulfitos">
               <label class="form-check-label mr-2" for="sulfitos">Sulfitos</label>

@@ -36,6 +36,11 @@ export class DashesService {
     });
   }
 
+  editDish(dish: Dash) {
+    this.dashesList.update(dish['$key'], dish);
+
+  }
+
   updateCategories(category: Category) {
     this.dashesList.update(category.$key, {
       name: category.name

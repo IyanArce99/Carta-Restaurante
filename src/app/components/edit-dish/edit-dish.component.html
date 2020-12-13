@@ -1,0 +1,74 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h4>Editar plato</h4>
+    </div>
+    <div class="modal-body">
+        <div class="col-12">
+            <form [formGroup]="dashesForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100 p-1"
+                            placeholder="Nombre">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" name="" formControlName="price" class="mr-2 rounded inpt-cat w-100 p-1"
+                            placeholder="Precio">
+                    </div>
+                    <div class="col-4">
+                        <select name="" formControlName="category" class="w-100 p-1 inpt-cat rounded" value="Categoria">
+                            <option value="" selected disabled hidden>Selecciona una categoría</option>
+                            <option *ngFor="let cat of categoryList" value="{{ cat.$key }}">{{ cat.name }}</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="description" formControlName="description" id="" cols="10" rows="5"
+                            class="mt-2 w-100"></textarea>
+                    </div>
+                    <div class="col-12 mt-2 mb-2">
+                        <div class="form-check form-check-inline">
+                            <input formControlName="sulfitos" class="form-check-input" type="checkbox" id="sulfitos"
+                                value="sulfitos">
+                            <label class="form-check-label mr-2">Sulfitos</label>
+                            <input formControlName="crustaceos" class="form-check-input" type="checkbox" id="crustaceos"
+                                value="crustaceos">
+                            <label class="form-check-label mr-2">Crustáceos</label>
+                            <input formControlName="pescados" class="form-check-input" type="checkbox" id="pescados"
+                                value="pescados">
+                            <label class="form-check-label mr-2">Pescados</label>
+                            <input formControlName="gluten" class="form-check-input" type="checkbox" id="gluten"
+                                value="gluten">
+                            <label class="form-check-label mr-2">Gluten</label>
+                            <input formControlName="lacteos" class="form-check-input" type="checkbox" id="lacteos"
+                                value="lacteos">
+                            <label class="form-check-label mr-2">Lácteos</label>
+                            <input formControlName="huevos" class="form-check-input" type="checkbox" id="huevos"
+                                value="huevos">
+                            <label class="form-check-label mr-2">Huevo</label>
+                            <input formControlName="frutos" class="form-check-input" type="checkbox" id="frutos"
+                                value="frutos">
+                            <label class="form-check-label mr-2">Frutos secos</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" name="" id="" placeholder="Precio Pq" formControlName="price_sm"
+                            class="p-1">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" name="" id="" placeholder="Precio Md" formControlName="price_md"
+                            class="p-1">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" name="" id="" placeholder="Precio Gr" formControlName="price_gr"
+                            class="p-1">
+                    </div>
+                </div>
+                <!-- <button type="submit" class="btn-warning d-flex justify-content-center align-items-center text-white p-2 mt-3"><i class="fas fa-pencil text-white mr-2"></i>Editar</button> -->
+            </form>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" (click)="close()">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="confirm()">Editar</button>
+    </div>
+</div>

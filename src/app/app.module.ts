@@ -27,6 +27,9 @@ import { BebidasComponent } from './components/bebidas/bebidas.component';
 import { PromocionesComponent } from './components/promociones/promociones.component';
 import { FormsModule }   from '@angular/forms';
 import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash/edit-dash.component';
+import { CommonModule } from '@angular/common';
+import { SimpleModalModule } from 'ngx-simple-modal';
+import { EditDishComponent } from './components/edit-dish/edit-dish.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash
     BebidasComponent,
     PromocionesComponent,
     EditDashComponent,
+    EditDishComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,8 +59,11 @@ import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     AngularFireStorageModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    SimpleModalModule
   ],
+  entryComponents: [EditDishComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
