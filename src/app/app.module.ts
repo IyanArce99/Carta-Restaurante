@@ -30,6 +30,9 @@ import { EditDashComponent } from './components/admin/dashboard/dashes/edit-dash
 import { CommonModule } from '@angular/common';
 import { SimpleModalModule } from 'ngx-simple-modal';
 import { EditDishComponent } from './components/edit-dish/edit-dish.component';
+import { EditCategoryComponent } from './components/admin/dashboard/categories/edit-category/edit-category.component';
+import { EditCategorydrinksComponent } from './components/admin/dashboard/categoriesdrinks/edit-categorydrinks/edit-categorydrinks.component';
+import { EditDrinksComponent } from './components/admin/dashboard/drinks/edit-drinks/edit-drinks.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { EditDishComponent } from './components/edit-dish/edit-dish.component';
     PromocionesComponent,
     EditDashComponent,
     EditDishComponent,
+    EditCategoryComponent,
+    EditCategorydrinksComponent,
+    EditDrinksComponent,
   ],
   imports: [
     BrowserModule,

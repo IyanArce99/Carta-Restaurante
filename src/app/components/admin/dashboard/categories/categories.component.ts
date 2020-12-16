@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../../../services/category.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Category } from 'src/app/models/category';
+import { SimpleModalService } from 'ngx-simple-modal';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
 
 @Component({
   selector: 'app-categories',
@@ -9,14 +11,17 @@ import { Category } from 'src/app/models/category';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  categoryForm = new FormGroup({
-    name: new FormControl('')
-  });
+  categoryForm: FormGroup;
   categoryList: Category[];
+  editModalRef: any;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(
+    private categoryService: CategoryService,
+    private simpleModalService: SimpleModalService
+    ) { }
 
   ngOnInit(): void {
+    this.buildForm();
     this.categoryService.getCategories();
     this.categoryService.getCategories().snapshotChanges().subscribe( category => {
       this.categoryList = [];
@@ -34,8 +39,32 @@ export class CategoriesComponent implements OnInit {
     console.log("Correcto");
   }
 
+  buildForm() {
+    this.categoryForm = new FormGroup({
+      name: new FormControl('')
+    });
+  }
+
+  editCategory(category: Category) {
+    this.openDishEditModal(category);
+    
+  }
+
   deleteCategory($key: string) {
     this.categoryService.deleteCategories($key);
+  }
+
+  openDishEditModal(category: Category) {
+    this.editModalRef = this.simpleModalService
+      .addModal(EditCategoryComponent, {
+        category,
+      })
+      .subscribe((editedCategory: Category) => {
+        if (editedCategory) {
+          this.categoryService.categoryList.update(category['$key'], editedCategory);
+          alert('Categoría editada');
+        }
+      });
   }
 
 

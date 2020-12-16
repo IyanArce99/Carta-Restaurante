@@ -59,9 +59,7 @@
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Descripción</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Categoría</th>
-      <th scope="col">Leyenda</th>     
+      <th scope="col">Precio</th>  
       <th scope="col">Acciones</th>
 
     </tr>
@@ -72,9 +70,7 @@
       <td>{{ dash.name }}</td>
       <td>{{ dash.description }}</td>
       <td>{{ dash.price }} €</td>
-      <td>{{ dash.category }}</td>
-      <td>{{ dash.gluten }}</td>
-      <td><button (click)="editDash(dash)" class="btn-edit text-white px-2 mr-2"><i class="fas fa-edit"></i></button><button (click)="deleteCategory(dash.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
+      <td class="d-flex"><button (click)="editDash(dash)" class="btn-edit text-white px-2 mr-2"><i class="fas fa-edit"></i></button><button (click)="deleteCategory(dash.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
     </tr>
   </tbody>
 </table>

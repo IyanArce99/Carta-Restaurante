@@ -61,7 +61,7 @@
       <td>{{ drink.name }}</td>
       <td>{{ drink.description }}</td>
       <td>{{ drink.price }} €</td>
-      <td><button (click)="deleteCategory(drink.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
+      <td class="d-flex"><button (click)="editDrink(drink)" class="btn-edit text-white px-2 mr-2"><i class="fas fa-edit"></i></button><button (click)="deleteCategory(drink.$key)" class="btn-delete text-white"><i class="fas fa-trash-alt"></i></button></td>
     </tr>
   </tbody>
 </table>

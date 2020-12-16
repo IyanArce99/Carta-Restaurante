@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SimpleModalService } from 'ngx-simple-modal';
 import { Category_drink } from 'src/app/models/category_drink';
 import { CategoryDrinksService } from 'src/app/services/category-drinks.service';
+import { EditCategorydrinksComponent } from './edit-categorydrinks/edit-categorydrinks.component';
 
 @Component({
   selector: 'app-categoriesdrinks',
@@ -9,12 +11,14 @@ import { CategoryDrinksService } from 'src/app/services/category-drinks.service'
   styleUrls: ['./categoriesdrinks.component.css']
 })
 export class CategoriesdrinksComponent implements OnInit {
-  categoryDrinksForm = new FormGroup({
-    name: new FormControl('')
-  });
+  categoryDrinksForm: FormGroup;
   categoryDrinkList: Category_drink[];
+  editModalRef: any;
 
-  constructor(private categoryService: CategoryDrinksService) { }
+  constructor(
+    private categoryService: CategoryDrinksService,
+    private simpleModalService: SimpleModalService
+    ) { }
 
   ngOnInit(): void {
     this.categoryService.getCategories();
@@ -34,10 +38,27 @@ export class CategoriesdrinksComponent implements OnInit {
     console.log("Correcto");
   }
 
+  buildForm() {
+    this.categoryDrinksForm = new FormGroup({
+      name: new FormControl('')
+    });
+  }
+
+  openDishEditModal(category: Category_drink) {
+    this.editModalRef = this.simpleModalService
+      .addModal(EditCategorydrinksComponent, {
+        category,
+      })
+      .subscribe((editedCategory: Category_drink) => {
+        if (editedCategory) {
+          this.categoryService.categoryList.update(category['$key'], editedCategory);
+          alert('Categoría editada');
+        }
+      });
+  }
+
   editCategory(category: Category_drink) {
-    console.log(category);
-    this.categoryDrinksForm.setValue(category);
-    console.log(category);
+    this.openDishEditModal(category);
   }
 
   deleteCategory($key: string) {
