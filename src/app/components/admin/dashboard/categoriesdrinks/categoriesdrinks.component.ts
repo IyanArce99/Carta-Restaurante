@@ -21,6 +21,7 @@ export class CategoriesdrinksComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.buildForm();
     this.categoryService.getCategories();
     this.categoryService.getCategories().snapshotChanges().subscribe( category => {
       this.categoryDrinkList = [];

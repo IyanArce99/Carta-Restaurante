@@ -1,9 +1,11 @@
+<div class="pt-3 pb-2 mb-3 border-bottom">
+  <h1>Añadir categorías (platos)</h1>
+  <p class="custom-text">Añade categorías a la carta de platos del menú. </p>
+</div>
 <div class="row">
-  <div class="col-6">
-    <h1 class="mt-4">Añadir categorías a la carta</h1>
-    <p>Añade categorías a la carta.</p>
+  <div class="col-lg-5 col-md-12 col-sm-12">
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" class="d-flex">
-      <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat">
+      <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat" placeholder="Nombre de la categoría">
       <button type="submit" class="btn-principal d-flex justify-content-center align-items-center text-white px-2"><i class="fas fa-plus-circle text-white mr-2"></i>Añadir</button>
     </form>
   </div>
