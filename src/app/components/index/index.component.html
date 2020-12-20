@@ -5,6 +5,6 @@
   <div class="d-flex flex-column align-items-end pb-5 menu-index">
     <a [routerLink]="['./carta']" class="py-2 px-3 mb-2 text-uppercase item-1">Carta</a>
     <a [routerLink]="['./bebidas']" class="py-2 px-3 mb-2 text-uppercase item-2">Bebidas</a>
-    <a [routerLink]="['./promociones']" class="py-2 px-3 mb-2 text-uppercase item-3">Promociones</a>
+    <a *ngIf="urls?.length > 0" [routerLink]="['./promociones']" class="py-2 px-3 mb-2 text-uppercase item-3">Promociones</a>
   </div>
 </div>
