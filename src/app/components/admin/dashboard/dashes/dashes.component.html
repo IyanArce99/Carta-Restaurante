@@ -2,7 +2,7 @@
 <p>Añade platos a la carta.</p>
 <div class="row">
   <div class="col-12 col-md-5">
-    <form [formGroup]="dashesForm" class="d-flex flex-column">
+    <form [formGroup]="dashesForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
       <div class="row">
           <div class="col-4">
             <input type="text" name="" formControlName="name" class="mr-2 rounded inpt-cat w-100 p-1" placeholder="Nombre">

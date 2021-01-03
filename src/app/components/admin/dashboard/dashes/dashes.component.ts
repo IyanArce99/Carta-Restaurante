@@ -84,6 +84,12 @@ export class DashesComponent implements OnInit, OnDestroy {
     });
   }
 
+  onSubmit() {
+    console.log(this.dashesForm.value);
+    this.dashesService.insertDashes(this.dashesForm.value);
+    console.log("Correcto");
+  }
+
 
   editDash(dash: Dash) {
     this.openDishEditModal(dash);
